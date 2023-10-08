@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "build:iife": "rollup src/main.js --file dist/bundle-iife.js --format iife",
+    "build:cjs": "rollup src/main.js --file dist/bundle-cjs.js --format cjs",
+    "build:umd": "rollup src/main.js --file dist/bundle-umd.js --format umd --name 'myBundle'"
   },
   "repository": {
     "type": "git",
